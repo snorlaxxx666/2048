@@ -91,6 +91,8 @@ function geser(baris) {
             baris[i] *= 2;
             baris[i + 1] = 0;
             score += baris[i];
+
+            document.getElementById("score").innerText = score;
         }
     }
 
@@ -101,6 +103,7 @@ function geser(baris) {
 
     return baris;
 }
+
 
 function geserkiri() {
     for (let i = 0; i < baris; i++) {
