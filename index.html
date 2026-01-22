@@ -1,20 +1,42 @@
 <!DOCTYPE html>
-<div lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2048 cuy</title>
+    <title>2048 Game</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
 
   <body>
-    <h1>2048 (nyoba buat)</h1>
-    <hr>
-    <h2><strong><i>Score:</i></strong> <span id="score"><i>0</i></span></h2>
-    
-     <div id="papan2048">
-    </div>
-    </body>
+    <div class="container">
+      <h1>2048</h1>
+      
+      <div class="score-container">
+        <div class="score-box">
+          <span class="score-label">Score</span>
+          <span id="score" class="score-value">0</span>
+        </div>
+        <div class="score-box">
+          <span class="score-label">Best</span>
+          <span id="bestScore" class="score-value">0</span>
+        </div>
+      </div>
 
+      <div id="papan2048"></div>
+
+      <div class="button-container">
+        <button id="newGameBtn" class="btn">New Game</button>
+      </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="gameOverModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Game Over!</h2>
+        <p id="gameOverScore">Final Score: 0</p>
+        <button id="restartBtn" class="btn">Play Again</button>
+      </div>
+    </div>
+  </body>
 </html>
