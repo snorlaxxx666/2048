@@ -42,7 +42,6 @@ function setupEventListeners() {
         resetGame();
     });
 
-    // Swipe gesture support
     document.addEventListener("touchstart", function (e) {
         touchStartX = e.changedTouches[0].screenX;
         touchStartY = e.changedTouches[0].screenY;
@@ -135,18 +134,14 @@ function AdaLantaiKosong() {
 }
 
 function canMove() {
-    // Check if any moves are possible
     if (AdaLantaiKosong()) return true;
 
-    // Check for possible merges
     for (let i = 0; i < baris; i++) {
         for (let j = 0; j < kolom; j++) {
             let tile = papan2048[i][j];
 
-            // Check right
             if (j < kolom - 1 && tile === papan2048[i][j + 1]) return true;
 
-            // Check down
             if (i < baris - 1 && tile === papan2048[i + 1][j]) return true;
         }
     }
@@ -171,9 +166,7 @@ function updatelantai(lantai, nomor) {
         let kelas = "lantai" + (nomor <= 8192 ? nomor : "8192");
         lantai.classList.add(kelas);
 
-        // Remove animation classes and re-trigger animation
         lantai.classList.remove("new", "merge");
-        // Trigger reflow to restart animation
         void lantai.offsetWidth;
     }
 }

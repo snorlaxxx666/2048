@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2048 Game</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-  </head>
 
-  <body>
-    <div class="container">
-      <h1>2048</h1>
-      
-      <div class="score-container">
-        <div class="score-box">
-          <span class="score-label">Score</span>
-          <span id="score" class="score-value">0</span>
-        </div>
-        <div class="score-box">
-          <span class="score-label">Best</span>
-          <span id="bestScore" class="score-value">0</span>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2048</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="crt-lines"></div>
+  <div class="vignette"></div>
+  <div class="container">
+    <h1>2048</h1>
+
+    <div class="score-container">
+      <div class="score-box">
+        <span class="score-label">Score</span>
+        <span id="score" class="score-value">0</span>
       </div>
-
-      <div id="papan2048"></div>
-
-      <div class="button-container">
-        <button id="newGameBtn" class="btn">New Game</button>
-      </div>
-    </div>
-
-    <!-- Game Over Modal -->
-    <div id="gameOverModal" class="modal hidden">
-      <div class="modal-content">
-        <h2>Game Over!</h2>
-        <p id="gameOverScore">Final Score: 0</p>
-        <button id="restartBtn" class="btn">Play Again</button>
+      <div class="score-box">
+        <span class="score-label">Best</span>
+        <span id="bestScore" class="score-value">0</span>
       </div>
     </div>
-  </body>
+
+    <div id="papan2048"></div>
+
+    <div class="button-container">
+      <button id="newGameBtn" class="btn">New Game</button>
+    </div>
+  </div>
+
+  <div id="gameOverModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Game Over!</h2>
+      <p id="gameOverScore">Final Score: 0</p>
+      <button id="restartBtn" class="btn">Play Again</button>
+    </div>
+  </div>
+</body>
+
 </html>
